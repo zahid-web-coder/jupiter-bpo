@@ -34,11 +34,8 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "border-b border-primary/10 bg-white/90 shadow-md shadow-slate-900/5 backdrop-blur-xl"
-          : "border-b border-transparent bg-white/70 backdrop-blur-md"
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 
+                 bg-white/90 backdrop-blur-md shadow-sm border-b border-orange-100"
     >
       <div className="section-wrapper">
         <div className="flex min-h-[4.25rem] items-center justify-between gap-4 py-3">
@@ -51,10 +48,12 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`rounded-xl px-4 py-2.5 text-sm font-medium transition-all duration-300 ${
+                className={`px-4 py-2 rounded-lg text-sm font-medium text-slate-600 
+                           hover:text-orange-600 hover:bg-orange-50 border-b-2 border-transparent 
+                           transition-all duration-200 ${
                   pathname === link.href
-                    ? "bg-primary-light text-primary-dark"
-                    : "text-slate-600 hover:bg-primary-light/60 hover:text-primary-dark"
+                    ? "font-semibold text-orange-600 bg-orange-50 border-b-2 border-orange-500"
+                    : ""
                 }`}
               >
                 {link.label}
@@ -65,9 +64,6 @@ export default function Navbar() {
           <div className="hidden items-center gap-3 md:flex">
             <Button href="/contact" variant="secondary" className="px-5 py-2.5 text-sm">
               Get a Quote
-            </Button>
-            <Button href="/contact" variant="primary" className="px-5 py-2.5 text-sm shadow-btn-primary">
-              Book a Call
             </Button>
           </div>
 

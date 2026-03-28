@@ -9,7 +9,7 @@ const stats = [
 
 export default function StatsSection() {
   return (
-    <section className="border-y border-primary/10 bg-orange-50 py-12 md:py-14">
+    <section className="bg-orange-50/60 border-y border-orange-100 py-14">
       <div className="section-wrapper">
         <div className="grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-8">
           {stats.map(({ value, label, icon: Icon }) => (
@@ -20,7 +20,7 @@ export default function StatsSection() {
               <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary-light text-primary-dark transition-transform duration-300 group-hover:scale-110 group-hover:bg-brand-gradient group-hover:text-white">
                 <Icon className="h-6 w-6" aria-hidden />
               </div>
-              <div className="text-3xl font-bold gradient-text md:text-4xl">{value}</div>
+              <div className="text-5xl md:text-6xl font-bold gradient-text">{value}</div>
               <div className="mt-1 text-sm font-medium text-slate-600">{label}</div>
             </div>
           ))}

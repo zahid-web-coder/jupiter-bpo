@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle, ArrowRight } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send, CheckCircle, ArrowRight, MessageCircle } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import Button from "@/components/ui/Button";
 
@@ -24,12 +24,14 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <SectionWrapper bg="orange" className="pt-32 pb-20 text-center">
-        <div className="tag mx-auto mb-6">Get in Touch</div>
-        <h1 className="section-title mb-6 max-w-3xl mx-auto">
-          Let's start your <span className="gradient-text">outsourcing journey</span>
+      <SectionWrapper bg="orange" className="pt-20 pb-20 text-center text-white">
+        <div className="tag mx-auto mb-6 bg-white/10 text-white border-white/20">
+          Get in Touch
+        </div>
+        <h1 className="text-4xl font-bold leading-tight tracking-tight mb-6 max-w-3xl mx-auto md:text-5xl">
+          Let's start your <span className="text-white/90">outsourcing journey</span>
         </h1>
-        <p className="section-subtitle mx-auto">
+        <p className="max-w-3xl mx-auto text-lg leading-relaxed text-white/80 mb-10 md:text-xl">
           Reach out for a free consultation, custom quote, or just to learn more about how Jupiter BPO can help.
         </p>
       </SectionWrapper>
@@ -118,6 +120,10 @@ export default function ContactPage() {
                   <div>
                     <h2 className="text-2xl font-bold text-slate-900 mb-1">Send us a message</h2>
                     <p className="text-slate-500 text-sm">Fill in the form and we'll be in touch within 24 hours.</p>
+                    <div className="flex items-center gap-2 text-sm text-green-600 font-medium mb-4">
+                      <CheckCircle className="w-4 h-4" />
+                      We respond within 24 hours — guaranteed
+                    </div>
                   </div>
 
                   <div className="grid sm:grid-cols-2 gap-5">
@@ -186,10 +192,20 @@ export default function ContactPage() {
                     />
                   </div>
 
+                  <div className="flex items-center gap-2 text-sm text-green-600 
+                                  font-medium py-2">
+                    <CheckCircle className="w-4 h-4 shrink-0" />
+                    We respond within 24 hours — guaranteed
+                  </div>
+
                   <button
                     onClick={handleSubmit}
                     disabled={loading || !form.name || !form.email || !form.message}
-                    className="btn-primary w-full justify-center text-base py-4 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+                    className="w-full bg-orange-500 hover:bg-orange-600 
+                               disabled:bg-orange-200 disabled:cursor-not-allowed 
+                               text-white font-semibold py-4 px-6 rounded-xl 
+                               transition-all duration-200 shadow-md hover:shadow-lg 
+                               hover:-translate-y-0.5 flex items-center justify-center gap-2 text-base"
                   >
                     {loading ? (
                       <>
@@ -203,6 +219,16 @@ export default function ContactPage() {
                       </>
                     )}
                   </button>
+                  <a href="https://wa.me/919972135467" target="_blank"
+                     rel="noopener noreferrer"
+                     className="flex items-center justify-center gap-2 w-full mt-3 
+                                py-3.5 px-6 rounded-xl border-2 border-green-500 
+                                text-green-600 font-semibold hover:bg-green-50 
+                                transition-all duration-200 text-sm"
+                  >
+                    <MessageCircle className="w-4 h-4" />
+                    Or chat on WhatsApp
+                  </a>
                 </div>
               )}
             </div>

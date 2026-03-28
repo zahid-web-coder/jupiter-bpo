@@ -34,8 +34,7 @@ export default function Footer() {
               <JupiterLogo variant="footer" />
             </Link>
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-slate-400">
-              Premium outsourcing from Karnataka — customer experience, technology operations, and back-office
-              delivery built for scale.
+              Premium BPO services from Karnataka — helping businesses scale with quality, efficiency, and innovation.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               {social.map(({ Icon, href, label }) => (

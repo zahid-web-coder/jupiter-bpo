@@ -89,7 +89,7 @@ export default function WhyChooseSection() {
               {whyUs.map((item) => (
                 <div
                   key={item.title}
-                  className="group rounded-2xl border border-slate-100 bg-card-gradient p-5 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/20 hover:shadow-card"
+                  className="group rounded-2xl border border-slate-100 bg-card-gradient p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/20 hover:shadow-card-hover"
                 >
                   <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-primary-light text-primary-dark transition-all duration-300 group-hover:scale-110 group-hover:bg-brand-gradient group-hover:text-white">
                     {item.icon}

@@ -61,12 +61,14 @@ export default function TechnologyPage() {
   return (
     <>
       {/* Hero */}
-      <SectionWrapper bg="orange" className="pt-32 pb-20 text-center">
-        <div className="tag mx-auto mb-6">Technology</div>
-        <h1 className="section-title mb-6 max-w-4xl mx-auto">
-          Enterprise-grade tech <span className="gradient-text">powering every interaction</span>
+      <SectionWrapper bg="orange" className="pt-20 pb-20 text-center text-white">
+        <div className="tag mx-auto mb-6 bg-white/10 text-white border-white/20">
+          Technology
+        </div>
+        <h1 className="text-4xl font-bold leading-tight tracking-tight mb-6 max-w-4xl mx-auto md:text-5xl">
+          Enterprise-grade tech <span className="text-white/90">powering every interaction</span>
         </h1>
-        <p className="section-subtitle mx-auto">
+        <p className="max-w-3xl mx-auto text-lg leading-relaxed text-orange-100 mb-10 md:text-xl">
           Modern CRM, AI tools, cloud infrastructure, and military-grade security — the technological backbone behind Jupiter BPO's consistent results.
         </p>
       </SectionWrapper>

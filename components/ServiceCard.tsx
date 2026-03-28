@@ -12,8 +12,8 @@ type Props = {
 export default function ServiceCard({ icon, title, description, href = "/services" }: Props) {
   return (
     <Link href={href} className="group flex h-full min-h-full">
-      <div className="card-elevated flex h-full min-h-full flex-col">
-        <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-primary-light transition-all duration-300 group-hover:scale-110 group-hover:bg-brand-gradient">
+      <div className="card-elevated flex h-full flex-col hover:-translate-y-1 hover:shadow-card-hover transition-all duration-300">
+        <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-orange-100 group-hover:bg-orange-500 transition-colors duration-300">
           <div className="h-6 w-6 text-primary-dark transition-colors duration-300 group-hover:text-white [&>svg]:h-full [&>svg]:w-full">
             {icon}
           </div>

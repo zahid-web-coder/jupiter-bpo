@@ -32,16 +32,18 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <SectionWrapper bg="orange" className="pt-32 pb-20 text-center">
-        <div className="tag mx-auto mb-6">About Jupiter BPO</div>
-        <h1 className="section-title mb-6 max-w-4xl mx-auto">
+      <SectionWrapper bg="orange" className="pt-20 pb-20 text-center text-white">
+        <div className="tag mx-auto mb-6 bg-white/10 text-white border-white/20">
+          About Jupiter BPO
+        </div>
+        <h1 className="text-4xl font-bold leading-tight tracking-tight mb-6 max-w-4xl mx-auto md:text-5xl">
           Building the future of BPO{" "}
-          <span className="gradient-text">from Karnataka</span>
+          <span className="text-white/90">from Karnataka</span>
         </h1>
-        <p className="section-subtitle mx-auto mb-10 max-w-3xl">
+        <p className="max-w-3xl mx-auto text-lg leading-relaxed text-orange-100 mb-10 md:text-xl">
           Since 2018, Jupiter BPO Services has been empowering businesses across India and beyond with world-class outsourcing — rooted in quality, driven by innovation.
         </p>
-        <Button href="/contact" variant="primary" className="px-8 py-4">
+        <Button href="/contact" variant="white" className="px-8 py-4">
           Partner with Us <ArrowRight className="w-5 h-5" />
         </Button>
       </SectionWrapper>

@@ -95,12 +95,14 @@ export default function IndustriesPage() {
   return (
     <>
       {/* Hero */}
-      <SectionWrapper bg="orange" className="pt-32 pb-20 text-center">
-        <div className="tag mx-auto mb-6">Industries We Serve</div>
-        <h1 className="section-title mb-6 max-w-4xl mx-auto">
-          Deep expertise across <span className="gradient-text">15+ verticals</span>
+      <SectionWrapper bg="orange" className="pt-20 pb-20 text-center text-white">
+        <div className="tag mx-auto mb-6 bg-white/10 text-white border-white/20">
+          Industries We Serve
+        </div>
+        <h1 className="text-4xl font-bold leading-tight tracking-tight mb-6 max-w-4xl mx-auto md:text-5xl">
+          Deep expertise across <span className="text-white/90">15+ verticals</span>
         </h1>
-        <p className="section-subtitle mx-auto">
+        <p className="max-w-3xl mx-auto text-lg leading-relaxed text-orange-100 mb-10 md:text-xl">
           We don't just know BPO — we know your industry. Jupiter BPO brings domain-specific knowledge to every engagement.
         </p>
       </SectionWrapper>

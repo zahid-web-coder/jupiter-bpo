@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowRight, CheckCircle, TrendingUp, Users, Sparkles } from "lucide-react";
+import { ArrowRight, CheckCircle, TrendingUp, Users, Sparkles, ThumbsUp, Globe, TrendingDown } from "lucide-react";
 import Button from "@/components/ui/Button";
 
 const HERO_IMAGE =
@@ -7,7 +7,7 @@ const HERO_IMAGE =
 
 export default function HeroSection() {
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden bg-hero-mesh pt-24">
+    <section className="relative flex min-h-[90vh] items-center overflow-hidden bg-hero-mesh pt-12 md:pt-16 pb-16">
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -right-32 -top-40 h-[520px] w-[520px] rounded-full bg-primary/20 blur-3xl" />
         <div className="absolute -bottom-44 -left-32 h-[480px] w-[480px] rounded-full bg-primary-dark/15 blur-3xl" />
@@ -15,14 +15,14 @@ export default function HeroSection() {
 
       <div className="section-wrapper relative z-10 py-16 md:py-24">
         <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-16">
-          <div className="space-y-8">
+          <div className="space-y-8 bg-orange-50 p-8 rounded-2xl">
             <div className="tag w-fit border-primary/20 shadow-sm">
               <Sparkles className="h-3.5 w-3.5 text-primary" aria-hidden />
               Trusted BPO Partner — Karnataka
             </div>
 
-            <h1 className="text-4xl font-bold leading-[1.08] tracking-tight text-slate-900 sm:text-5xl md:text-6xl xl:text-7xl">
-              Outsource <span className="gradient-text">Smarter</span> with Jupiter BPO
+            <h1 className="text-5xl md:text-6xl xl:text-7xl font-bold text-slate-900 leading-[1.06] tracking-tight">
+              Outsource <span className="gradient-text">Smarter</span> with Jupiter BPO Services
             </h1>
 
             <p className="max-w-xl text-lg leading-relaxed text-slate-600 md:text-xl">
@@ -31,25 +31,30 @@ export default function HeroSection() {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <Button href="/contact" variant="primary" className="px-8 py-4 text-base">
-                Get a Free Quote
+              <Button href="/contact" variant="primary" className="px-8 py-4 text-base shadow-lg hover:scale-105 transition-all">
+                Get Your Free Quote →
                 <ArrowRight className="h-5 w-5" />
               </Button>
-              <Button href="/services" variant="secondary" className="px-8 py-4 text-base">
+              <Button href="/services" variant="secondary" className="px-8 py-4 text-base hover:scale-105 transition-all">
                 Explore Services
               </Button>
             </div>
 
+            <p className="text-sm text-slate-500 mt-3">
+              No commitment · Response within 24 hours
+            </p>
+
             <div className="flex flex-wrap items-center gap-x-8 gap-y-3 pt-2">
               {[
-                { val: "500+", text: "Agents" },
-                { val: "98%", text: "CSAT score" },
-                { val: "24/7", text: "Operations" },
-              ].map((b) => (
-                <div key={b.text} className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 shrink-0 text-primary" aria-hidden />
+                { val: "500+", text: "Agents", icon: Users },
+                { val: "98%", text: "CSAT", icon: ThumbsUp },
+                { val: "15+", text: "Industries", icon: Globe },
+                { val: "60%", text: "Cost Savings", icon: TrendingDown },
+              ].map(({ val, text, icon: Icon }) => (
+                <div key={text} className="flex flex-col items-center gap-1">
+                  <Icon className="w-5 h-5 text-orange-500 mb-1" aria-hidden />
                   <span className="text-sm font-medium text-slate-700">
-                    <strong className="text-primary-dark">{b.val}</strong> {b.text}
+                    <strong className="text-primary-dark">{val}</strong> {text}
                   </span>
                 </div>
               ))}
@@ -57,17 +62,13 @@ export default function HeroSection() {
           </div>
 
           <div className="relative hidden lg:block">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-2xl shadow-[0_28px_80px_-24px_rgba(249,115,22,0.45)] ring-1 ring-primary/10">
-              <Image
-                src={HERO_IMAGE}
-                alt="Collaborative operations team at Jupiter BPO"
-                fill
-                className="object-cover object-center"
-                sizes="(min-width: 1024px) 50vw, 100vw"
-                priority
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-orange-200/50 aspect-[4/3]">
+              <img
+                src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&auto=format&fit=crop&q=80"
+                alt="Jupiter BPO professional call center team"
+                className="w-full h-full object-cover absolute inset-0"
               />
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary-dark/50 via-primary/20 to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-tr from-orange-900/20 to-transparent" />
             </div>
 
             <div className="absolute -bottom-6 -left-6 animate-float rounded-2xl border border-primary/10 bg-white/95 p-4 shadow-card-hover backdrop-blur-md">

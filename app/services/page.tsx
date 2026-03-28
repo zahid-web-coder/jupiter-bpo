@@ -57,26 +57,32 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero */}
-      <SectionWrapper bg="orange" className="pt-32 pb-20 text-center">
-        <div className="tag mx-auto mb-6">Our Services</div>
-        <h1 className="section-title mb-6 max-w-4xl mx-auto">
-          Premium BPO services <span className="gradient-text">built for scale</span>
+      <SectionWrapper bg="orange" className="pt-20 pb-20 text-center text-white">
+        <div className="tag mx-auto mb-6 bg-white/10 text-white border-white/20">
+          Our Services
+        </div>
+        <h1 className="text-4xl font-bold leading-tight tracking-tight mb-6 max-w-4xl mx-auto md:text-5xl">
+          Premium BPO services <span className="text-white/90">built for scale</span>
         </h1>
-        <p className="section-subtitle mx-auto">
+        <p className="max-w-3xl mx-auto text-lg leading-relaxed text-white/80 mb-10 md:text-xl">
           Five core service lines, hundreds of use cases — all delivered by a team that treats your business as their own.
         </p>
       </SectionWrapper>
 
       {/* Services Detail */}
-      <div className="space-y-24">
+      <div className="space-y-16">
         {services.map((svc, i) => {
           const Icon = svc.icon;
           return (
-            <SectionWrapper key={svc.title}>
+            <SectionWrapper key={svc.title} className={`py-20 md:py-24 ${i % 2 === 0 ? "bg-white" : "bg-slate-50"}`}>
               <div className={`grid lg:grid-cols-2 gap-14 items-center ${i % 2 === 1 ? "lg:grid-flow-dense" : ""}`}>
                 {/* Image */}
                 <div className={`relative rounded-3xl overflow-hidden shadow-xl aspect-[4/3] ${i % 2 === 1 ? "lg:col-start-2" : ""}`}>
-                  <Image src={svc.img} alt={svc.title} fill className="object-cover" />
+                  <img
+                    src={svc.img}
+                    alt={svc.title}
+                    className="w-full h-full object-cover absolute inset-0"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-tr from-orange-900/20 to-transparent" />
                 </div>
 
